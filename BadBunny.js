@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native'; 
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        {/* Imagen Bad Bunny*/}
+        {/* Imagen principal (Bad Bunny) */}
         <Image
-          source={require('./assets/BadBunny.jpg')}
+          source={require('./assets/BadBunny.jpg')} // Imagen local desde la carpeta assets
           style={styles.image}
         />
 
-        {/* usuario */}
+        {/* Información del usuario */}
         <View style={styles.userInfo}>
           <Image
-            source={require('./assets/AvatardeUsuario.jpg')} 
+            source={require('./assets/AvatardeUsuario.jpg')} // Avatar del usuario
             style={styles.avatar}
           />
           <View>
@@ -25,7 +23,7 @@ export default function App() {
           <MaterialIcons name="notifications" size={24} color="#444" style={styles.notificationIcon} />
         </View>
 
-        {/* evento */}
+        {/* Información del evento */}
         <View style={styles.content}>
           <Text style={styles.title}>Bad Bunny en El Salvador</Text>
           <Text style={styles.description}>
@@ -42,7 +40,7 @@ export default function App() {
               <MaterialIcons name="event" size={20} color="#444" />
               <Text style={styles.detailText}>Dom, 30 de Mar</Text>
             </View>
-            <Text style={styles.tickets}>❤¡Tickets disponibles!</Text>
+            <Text style={styles.tickets}>¡Tickets disponibles!</Text>
           </View>
         </View>
       </View>
@@ -71,9 +69,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: "100%",
-    height: 400,
-    borderWidth: 20,  // Grosor del borde
-    borderColor: '#a9e1f3',  // Color del borde
+    height: 200,
   },
   userInfo: {
     flexDirection: "row",
@@ -101,17 +97,14 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   title: {
-    fontSize: 25,
+    fontSize: 18,
     fontWeight: "bold",
     marginBottom: 5,
-    marginLeft: 40,
-
   },
   description: {
-    fontSize: 16,
+    fontSize: 14,
     color: "#666",
     marginBottom: 15,
-    
   },
   details: {
     marginTop: 10,
@@ -120,7 +113,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 5,
-    marginLeft: 50,
   },
   detailText: {
     marginLeft: 5,
@@ -132,6 +124,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#28a745",
     fontWeight: "bold",
-    marginLeft: 50,
   },
 });
+
+
+/* 
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+} */
